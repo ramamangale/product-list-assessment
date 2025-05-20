@@ -60,6 +60,7 @@ function NavBar() {
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
               color="inherit"
+              data-testid="close-btn"
             >
               <MenuIcon />
             </IconButton>

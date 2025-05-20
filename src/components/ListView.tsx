@@ -55,10 +55,10 @@ function ListView(props: any) {
                     aria-label="button group"
                     sx={{ marginLeft: 2 }}
                 >
-                    <Button onClick={() => handleSort('price', 'desc')}>High</Button>
-                    <Button onClick={() => handleSort('price', 'asc')}>Low</Button>
+                    <Button data-testd="desc" onClick={() => handleSort('price', 'desc')}>High</Button>
+                    <Button data-testd="asc" onClick={() => handleSort('price', 'asc')}>Low</Button>
                 </ButtonGroup>
-                <Button variant="outlined" sx={{ marginLeft: 2 }} onClick={toggleView}>{mode !== 'grid' ? 'grid' : 'table'}</Button>
+                <Button variant="outlined" data-testd="mode" sx={{ marginLeft: 2 }} onClick={toggleView}>{mode !== 'grid' ? 'grid' : 'table'}</Button>
             </div>
             {mode === 'grid' ? renderGridView() : tableView()}
         </>
